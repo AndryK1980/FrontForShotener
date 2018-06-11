@@ -1,17 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="script.js"></script>
+    <title>Shotener</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/shortenStyle.css"/>
+    <script src="scripts/jquery-3.3.1.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
 </head>
+
 <body>
-    <input id="url" type="text">
-    <button id="send">send</button>
-    <br/><br/>
-    <a id="short" href="/"></a>
+    <div class="site-wrapper">
+        
+            <div class="main-container">
+               
+                    <h1>URL Shortener</h1>
+                    <div class="row">
+                        <div class="col-md-4 offset-md-4">
+                            <div class="form-group input-group-lg">
+                                <input id="url-field" type="text" class="form-control form-control-input" placeholder="Paste your link">
+                                <input id="short-url-field" type="text" class="form-control form-control-input" placeholder="Paste your short url">
+                                <span class="input-group-btn">
+                                    <button id="btn-shorten" class="btn btn-shorten" type="button">SHORTEN</button>
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="short-url-link-container col-md-6 offset-md-3">
+                            <a id="short-url-link" href=""></a>
+                        </div>
+                    </div>
+                </div>
+    <div id="myModalErr" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content short-model-content">
+                <div class="modal-header">
+                        <h4 class="modal-title">Error</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                   
+                </div>
+                <div class="modal-body">
+                        <span id="massege-err" class="modal-body-text"></span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+                
+    </div>
+    <script src="scripts/script.js"></script>
 </body>
+
 </html>
