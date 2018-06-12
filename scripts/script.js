@@ -1,7 +1,7 @@
 $(document).ready(function(){
     $('#btn-shorten').on('click', sendUrl);
 });
-var API_URL = 'http://localhost:4000'
+var API_URL = 'https://apiurlshort.herokuapp.com/urls'
 var sendUrl = function(){
     var url = $('#url-field').val();
     var userShortUrl=$('#short-url-field').val();
